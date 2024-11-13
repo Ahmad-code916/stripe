@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496559899771",
+    "project_id": "stripe-8fc5f",
+    "storage_bucket": "stripe-8fc5f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496559899771:android:1ce960aeb0d92b417a4ede",
+        "android_client_info": {
+          "package_name": "com.example.stripe_method"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsq80Hfb2iIatOacyqI1XPbd3p5sJ-kVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
