@@ -156,7 +156,7 @@ class StripeSetupIntent extends GetConnect implements GetxService {
     }
   }
 
-/*  Future<void> displaySetupSheet() async {
+  Future<void> displaySetupSheet() async {
     try {
       await Stripe.instance.presentPaymentSheet().then((value) {
         showDialog(
@@ -201,7 +201,7 @@ class StripeSetupIntent extends GetConnect implements GetxService {
         print('$e');
       }
     }
-  }*/
+  }
 }
 
 class StripeCustomer extends GetConnect implements GetxService {
@@ -257,8 +257,6 @@ class StripeCustomer extends GetConnect implements GetxService {
     } catch (e) {
       rethrow;
     }
-
-    return null;
   }
 }
 

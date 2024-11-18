@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                           'Payment',
                           style: TextStyle(color: Colors.white),
                         )),
-                  )
+                  ),
                 ],
               ),
             );

@@ -18,7 +18,8 @@ class HomeScreenController extends GetxController {
   }
 
   void goToSettingsScreen() {
-    Get.to(() => CardSettings());
+    // Get.to(() => CardSettings());
+    Get.to(() => CardListScreen());
   }
 
   void check() async {
@@ -26,13 +27,12 @@ class HomeScreenController extends GetxController {
       var email = AdminBaseController.adminData.email ?? '';
       var uid = AdminBaseController.adminData.uid ?? '';
       final stripeCustomer = StripeCustomer(uid, email);
-      // _baseController.showProgress();
+      _baseController.showProgress();
       var myModel = AdminBaseController.adminData;
       log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Admin Id : ${myModel.name}');
       log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Admin Id : ${myModel.customerId}');
       var cusId = myModel.customerId ?? '';
       log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^CustomerID^^^^^^^^^^^^ : $cusId');
-
       if (cusId.isEmpty) {
         var customer = await stripeCustomer.getCustomer();
         cusId = customer['id'];
@@ -52,6 +52,7 @@ class HomeScreenController extends GetxController {
         var stripePayment = StripeSetupIntent(cusId);
         stripePayment.makeDefaultCard();
       }
+
     } catch (e) {
       _baseController.hideProgress();
       showOkAlertDialog(
